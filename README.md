@@ -172,10 +172,8 @@ Check/Start/Connect Ansible container
 
 Download file from website
 - curl https:Link-of-the-file >> Path-of-destination/file-Name
-
-Example: curl https://gist.githubusercontent.com/slape/58541585cc1886d2e26cd8be557ce04c/raw/0ce2c7e744c54513616966affb5e9d96f5e12f73/metricbeat >> /etc/ansible/metricbeat-config.yml
+  Example: curl https://gist.githubusercontent.com/slape/58541585cc1886d2e26cd8be557ce04c/raw/0ce2c7e744c54513616966affb5e9d96f5e12f73/metricbeat >> /etc/ansible/metricbeat-config.yml
 
 Update playbook file
 - nano Path/fileName.yml
-
-Example: nano /etc/ansible/files/filebeat-config.yml
+  Example: nano /etc/ansible/files/filebeat-config.yml
