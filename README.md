@@ -5,7 +5,7 @@ ELK Project 1
 
 The files in this repository were used to configure the network depicted below.
 
-![Project 1 Diagram](../ELK-Project/Diagram/Project-1-Diagram.png)
+![Project 1 Diagram](../ELK-Project/blob/main/Diagrams/Project-1-Diagram.png)
 
 These files have been tested and used to generate a live ELK deployment on Azure. They can be used to either recreate the entire deployment pictured above. Alternatively, select portions of the playbook files may be used to install only certain pieces of it, such as Filebeat.
 
@@ -172,10 +172,9 @@ Check/Start/Connect Ansible container
 
 Download file from website
 - curl https:Link-of-the-file >> Path-of-destination/file-Name
-
-Example: curl https://gist.githubusercontent.com/slape/58541585cc1886d2e26cd8be557ce04c/raw/0ce2c7e744c54513616966affb5e9d96f5e12f73/metricbeat >> /etc/ansible/metricbeat-config.yml
+- Example: curl https://gist.githubusercontent.com/slape/58541585cc1886d2e26cd8be557ce04c/raw/0ce2c7e744c54513616966affb5e9d96f5e12f73/metricbeat >> /etc/ansible/metricbeat-config.yml
 
 Update playbook file
 - nano Path/fileName.yml
+- Example: nano /etc/ansible/files/filebeat-config.yml
 
-Example: nano /etc/ansible/files/filebeat-config.yml
