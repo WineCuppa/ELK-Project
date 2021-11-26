@@ -11,12 +11,12 @@ These files have been tested and used to generate a live ELK deployment on Azure
 
 The playbook files are following:
 * [elk.yml](Ansible/elk.yml)
-* [host.yml](../ELK-Project/Ansible/host.yml)
-* [pentest.yml](../ELK-Project/Ansible/pentest.yml)
-* [filebeat-config.yml](../ELK-Project/Ansible/filebeat-config.yml)
-* [filebeat-playbook.yml](../ELK-Project/Ansible/filebeat-playbook.yml)
-* [metricbeat-config.yml](../ELK-Project/Ansible/metricbeat-config.yml)
-* [metricbeat-playbook.yml](../ELK-Project/Ansible/metricbeat-playbook.yml)
+* [host.yml](Ansible/host.yml)
+* [pentest.yml](Ansible/pentest.yml)
+* [filebeat-config.yml](Ansible/filebeat-config.yml)
+* [filebeat-playbook.yml](Ansible/filebeat-playbook.yml)
+* [metricbeat-config.yml](Ansible/metricbeat-config.yml)
+* [metricbeat-playbook.yml](Ansible/metricbeat-playbook.yml)
 
 
 This document contains the following details:
@@ -93,13 +93,13 @@ The playbook implements the following tasks:
 
 The following screenshot displays the result of running `docker ps` after successfully configuring the ELK instance.
 
-![screenshot of docker ps output](../ELK-Project/Diagram/docker-ps-output.png)
+![screenshot of docker ps output](Diagram/docker-ps-output.png)
 
 - Verify that we can load the ELK stack server from the browser at http://[ELK-VM-IP-Address]:5601/app/kibana
 
 The following screenshot displays the result of running kibana after successfully configuring the ELK instance
 
-![screenshot of kibana](../ELK-Project/Diagram/kibana.png)
+![screenshot of kibana](Diagram/kibana.png)
 
 ### Target Machines & Beats
 This ELK server is configured to monitor the following machines:
