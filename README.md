@@ -84,22 +84,22 @@ The playbook implements the following tasks:
 - Lovate the container name : sudo docker container list -a
 - Start the container : sudo docker start container_name
 - Connect to Ansible container : sudo docker attach container_name
-- Add ELK-VM to the Ansible hosts file : nano /etc/ansible/hosts.yml (see: [host.yml](../ELK-Project/Ansible/host.yml))
+- Add ELK-VM to the Ansible hosts file : nano /etc/ansible/hosts.yml (see: [host.yml](Ansible/host.yml))
 - Run: ansible all -m ping
-- Create a new Ansible playbook for ELK-VM: nano /etc/ansible/elk.yml (see: [elk.yml](../ELK-Project/Ansible/elk.yml))
+- Create a new Ansible playbook for ELK-VM: nano /etc/ansible/elk.yml (see: [elk.yml](Ansible/elk.yml))
 - Run: ansible-playbook /etc/ansible/elk.yml
 - SSH from Ansible container to ELK-VM : ssh username@ELK-VM-IP-address
 - Run: sudo docker ps
 
 The following screenshot displays the result of running `docker ps` after successfully configuring the ELK instance.
 
-![screenshot of docker ps output](Diagram/docker-ps-output.png)
+![screenshot of docker ps output](Diagrams/docker-ps-output.png)
 
 - Verify that we can load the ELK stack server from the browser at http://[ELK-VM-IP-Address]:5601/app/kibana
 
 The following screenshot displays the result of running kibana after successfully configuring the ELK instance
 
-![screenshot of kibana](Diagram/kibana.png)
+![screenshot of kibana](Diagrams/kibana.png)
 
 ### Target Machines & Beats
 This ELK server is configured to monitor the following machines:
@@ -125,13 +125,13 @@ SSH into the control node and follow the steps below:
 - Run: docker container list -a
 - Run: docker start elk
 - Copy the playbook files to Ansible Docker Container Run: curl https://gist.githubusercontent.com/slape/5cc350109583af6cbe577bbcc0710c93/raw/eca603b72586fbe148c11f9c87bf96a63cb25760/Filebeat >> /etc/ansible/filebeat-config.yml
-- Update the filebeat-config.yml file See: [filebeat-config.yml](../ELK-Project/Ansible/filebeat-config.yml)
+- Update the filebeat-config.yml file See: [filebeat-config.yml](Ansible/filebeat-config.yml)
 - Save this file in /etc/ansible/files/filebeat-config.yml
 - Run: ansible-playbook /etc/ansible/files/filebeat-config.yml
 - Download the .deb file Run: curl https://artifacts.elastic.co/downloads/beats/filebeat/filebeat-7.4.0-amd64.deb
 - Install the .deb file using the dpkg command Run: dpkg -i filebeat-7.4.0-amd64.deb
 - Copy the filebeat-playbook file in a directory called files in the Ansible directory.(/etc/ansible/files/)
-- Update the filebeat-playbook. file See: [filebeat-playbook.yml](../ELK-Project/Ansible/filebeat-playbook.yml)
+- Update the filebeat-playbook. file See: [filebeat-playbook.yml](Ansible/filebeat-playbook.yml)
 - Run: ansible-playbook filebeat-playbook.yml.
 - Verifying installation, navigate back to the Filebeat installation page on the ELK server GUI: http://ELK-VM-IP-address:5601/app/kibana
 - On the same page, scroll to Step 5: Module Status and click Check Data.
@@ -139,7 +139,7 @@ SSH into the control node and follow the steps below:
 
 The following screenshot displays the result of successfully configuring the filebeat.
 
-![screenshot of filebeat](../ELK-Project/Diagram/filebeat.png)
+![screenshot of filebeat](Diagrams/filebeat.png)
 
 ### Install Metricbeat
 SSH into the control node and follow the steps below:
@@ -147,20 +147,20 @@ SSH into the control node and follow the steps below:
 - Run: docker container list -a
 - Run: docker start elk
 - Copy the playbook files to Ansible Docker Container Run: curl https://gist.githubusercontent.com/slape/58541585cc1886d2e26cd8be557ce04c/raw/0ce2c7e744c54513616966affb5e9d96f5e12f73/metricbeat >> /etc/ansible/metricbeat-config.yml
-- Update the metricbeat-config.yml file See: [metricbeat-config.yml](../ELK-Project/Ansible/metricbeat-config.yml)
+- Update the metricbeat-config.yml file See: [metricbeat-config.yml](Ansible/metricbeat-config.yml)
 - Save this file in /etc/ansible/files/metricbeat-config.yml
 - Run: ansible-playbook /etc/ansible/files/metricbeat-config.yml
 - Download the .deb file Run: curl https://artifacts.elastic.co/downloads/beats/metricbeat/metricbeat-7.4.0-amd64.deb
 - Install the .deb file using the dpkg command Run: dpkg -i metricbeat-7.4.0-amd64.deb
 - Copy the metricbeat-playbook file in a directory called files in the Ansible directory.(/etc/ansible/files/)
-- Update the mrtricbeat-playbook. file See: [metricbeat-playbook.yml](../ELK-Project/Ansible/metricbeat-playbook.yml)
+- Update the mrtricbeat-playbook. file See: [metricbeat-playbook.yml](Ansible/metricbeat-playbook.yml)
 - Run: ansible-playbook metricbeat-playbook.yml.
 - Verifying installation, navigate back to the Metricbeat installation page on the ELK server GUI: http://ELK-VM-IP-address:5601/app/kibana
 - On the same page, scroll to Step 5: Module Status and click Check Data.
 
 The following screenshot displays the result of successfully configuring the metricbeat.
 
-![screenshot of metricbeat](../ELK-Project/Diagram/metricbeat.png)
+![screenshot of metricbeat](Diagrams/metricbeat.png)
 
 ### Useful commands
 
