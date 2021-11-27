@@ -81,7 +81,7 @@ Ansible was used to automate configuration of the ELK machine. No configuration 
 The playbook implements the following tasks:
 - SSH into Jump-Box using : ssh username@jump-box-IP-address 
 - Check Ansible container : sudo docker ps
-- Lovate the container name : sudo docker container list -a
+- Locate the container name : sudo docker container list -a
 - Start the container : sudo docker start container_name
 - Connect to Ansible container : sudo docker attach container_name
 - Add ELK-VM to the Ansible hosts file : nano /etc/ansible/hosts.yml (see: [host.yml](Ansible/host.yml))
