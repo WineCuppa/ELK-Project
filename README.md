@@ -125,7 +125,7 @@ SSH into the control node and follow the steps below:
 - Run: docker container list -a
 - Run: docker start elk
 - Copy the playbook files to Ansible Docker Container Run: curl https://gist.githubusercontent.com/slape/5cc350109583af6cbe577bbcc0710c93/raw/eca603b72586fbe148c11f9c87bf96a63cb25760/Filebeat >> /etc/ansible/filebeat-config.yml
-- Update the filebeat-config.yml file See: [filebeat-config.yml](Ansible/filebeat-config.yml)
+- Update the filebeat-config.yml file See: [filebeat-config.yml](Ansible/filebeat-config.yml) Run: nano /etc/ansible/filebeat-config.yml
 - Save this file in /etc/ansible/files/filebeat-config.yml
 - Run: ansible-playbook /etc/ansible/files/filebeat-config.yml
 - Download the .deb file Run: curl https://artifacts.elastic.co/downloads/beats/filebeat/filebeat-7.4.0-amd64.deb
@@ -147,7 +147,7 @@ SSH into the control node and follow the steps below:
 - Run: docker container list -a
 - Run: docker start elk
 - Copy the playbook files to Ansible Docker Container Run: curl https://gist.githubusercontent.com/slape/58541585cc1886d2e26cd8be557ce04c/raw/0ce2c7e744c54513616966affb5e9d96f5e12f73/metricbeat >> /etc/ansible/metricbeat-config.yml
-- Update the metricbeat-config.yml file See: [metricbeat-config.yml](Ansible/metricbeat-config.yml)
+- Update the metricbeat-config.yml file See: [metricbeat-config.yml](Ansible/metricbeat-config.yml) Run: nano /etc/ansible/metricbeat-config.yml
 - Save this file in /etc/ansible/files/metricbeat-config.yml
 - Run: ansible-playbook /etc/ansible/files/metricbeat-config.yml
 - Download the .deb file Run: curl https://artifacts.elastic.co/downloads/beats/metricbeat/metricbeat-7.4.0-amd64.deb
